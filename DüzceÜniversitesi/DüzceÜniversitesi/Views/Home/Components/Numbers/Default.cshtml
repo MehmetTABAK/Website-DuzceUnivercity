@@ -1,0 +1,17 @@
+﻿@model IEnumerable<DüzceÜniversitesi.Models.AkademicNumbers>
+
+<table class="table table-success">
+    <tr>
+        <th>Birim</th>
+        <th>Telefon</th>
+        <th>Faks</th>
+    </tr>
+    @foreach(var x in Model)
+    {
+    <tr>
+        <td>@x.AkademicName</td>
+        <td>@x.AcademicNumber</td>
+        <td>@x.AkademicFaks</td>
+    </tr>
+    }
+</table>

@@ -1,0 +1,51 @@
+﻿@model DüzceÜniversitesi.Models.User
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Düzce Üniversitesi</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/LoginForm/css/style.css">
+</head>
+<body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="login-wrap py-5">
+                        <h3 class="text-center mb-0">Hoşgeldiniz</h3>
+                        <p class="text-center">Bilgilerinizi girerek oturum açınız</p>
+                        <form asp-action="Login" method="post" class="text-center">
+                            <div asp-validation-summary="All"></div>
+                            <div class="form-group">
+                                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-user"></span></div>
+                                <label asp-for="email">Email:</label>
+                                <input asp-for="email" />
+                            </div>
+                            <div class="form-group">
+                                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-lock"></span></div>
+                                <label asp-for="sifre">Sifre:</label>
+                                <input type="password" asp-for="sifre" />
+                            </div>
+                            <br />
+                            <button type="submit" class="btn btn-outline-secondary">Giriş Yap</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="~/LoginForm/js/jquery.min.js"></script>
+    <script src="~/LoginForm/js/popper.js"></script>
+    <script src="~/LoginForm/js/bootstrap.min.js"></script>
+    <script src="~/LoginForm/js/main.js"></script>
+
+</body>
+</html>

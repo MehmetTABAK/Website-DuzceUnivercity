@@ -1,0 +1,11 @@
+﻿@model DüzceÜniversitesi.Models.Announcement
+
+<form class="form-group" method="post">
+    <b>Duyuru Başlığı</b>
+    @Html.TextBoxFor(x => x.DuyuruBasligi, new { @class = "form-control" })
+    <br />
+    <b>Duyuru İçeriği</b>
+    @Html.TextAreaFor(x => x.DuyuruIcerigi, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Duyuruyu Paylaş</button>
+</form>

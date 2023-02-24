@@ -1,0 +1,35 @@
+﻿@using DüzceÜniversitesi.Models
+@model List<Announcement>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Düzce Üniversitesi</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div asp-action="Announcements" method="post" class="text-right">
+        <a asp-action="Login"><h5>Personel Girişi</h5></a>
+    </div>
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>Duyuru Başlığı</th>
+            <th>Detaylar</th>
+        </tr>
+
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.DuyuruBasligi</td>
+                <td><a href="/home/Detail/@x.ID" class="btn btn-info">Detaylar</a></td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

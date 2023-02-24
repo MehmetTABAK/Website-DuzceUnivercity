@@ -1,0 +1,10 @@
+﻿@model DüzceÜniversitesi.Models.Announcement
+
+@using (Html.BeginForm("UpdateAnnouncement", "home", FormMethod.Post))
+{
+    <b>Duyuru Başlığı</b>
+    @Html.TextBoxFor(x => x.DuyuruBasligi, new { @class = "form-control" })
+    <br />
+    <b>Duyuru İçeriği</b>
+    @Html.TextAreaFor(x => x.DuyuruIcerigi, new { @class = "form-control" })
+}
